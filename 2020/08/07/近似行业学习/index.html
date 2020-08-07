@@ -1,37 +1,394 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html>
+<meta  lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#fff" id="theme-color">
+  <link rel="icon" href="/img/Kaze.png">
+  <title>theme-kaze demo</title>
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      return setting;
+    };
+    // apply current darkmode setting
+    var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      if(setting === getCssMediaQuery()) {
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+      } else if(reverseDarkList[setting]) {
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+      } else {
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+      }
+    };
+    setDarkmode();
+  </script>
+  <script>
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  </script>
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  
+  <link rel="preload" href="//cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js" as="script">
+  
+  
+  <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="/css/main.css">
+
+  
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_vpj3dq9ceqa.css">
+
+  
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+
+  
+  
+  
+<meta name="generator" content="Hexo 5.0.0"></head>
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
+<body>
+  <div class="wrapper">
+    
+    <nav class="navbar">
+  <div class="navbar-logo">
+    <span class="navbar-logo-main">
+      
+      <img class="navbar-logo-img" src="/img/Kaze.png">
+      
+      <span class="navbar-logo-dsc">theme-kaze demo</span>
+    </span>
+  </div>
+  <div class="navbar-menu">
+    
+    <a href="/" class="navbar-menu-item">Home </a>
+    
+    <a href="/archives" class="navbar-menu-item">Archive </a>
+    
+    <a href="/tags" class="navbar-menu-item">Tags </a>
+    
+    <a href="/categories" class="navbar-menu-item">Categories </a>
+    
+    <a href="/about" class="navbar-menu-item">About </a>
+    
+    <a href="/links" class="navbar-menu-item">Friends </a>
+    
+    <a class="navbar-menu-item" id="dark"><i class="iconfont icon-weather"></i></a>
+  </div>
+</nav>
+    
+    <div class="section-wrap">
+      <div class="container">
+        <div class="columns">
+          <main class="main-column">
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2020-08-07T06:34:27.008Z" style="display: flex; align-items: center;">
+      <i class="iconfont icon-calendar" style="margin-right: 2px;"></i>
+      <span>2020-08-07</span>
+    </time>
+    
+    
+    <span class="dot"></span>
+    <span>224 words</span>
+    
+  </div>
+  
+  </header>
+  <div id="section" class="post-content">
+    <h1 id="近似行业学习"><a href="#近似行业学习" class="headerlink" title="近似行业学习"></a>近似行业学习</h1><h2 id="医药生产可视化"><a href="#医药生产可视化" class="headerlink" title="医药生产可视化"></a>医药生产可视化</h2><p>医药制造智慧工厂</p>
+<p>生产效率</p>
+<p>库存水平</p>
+<p>生产质量</p>
+<p>制造范式：维纳-控制论</p>
+<p>自上而下尽可能列出所有的分支</p>
+<p>计划</p>
+<p>测量</p>
+<p>偏差</p>
+<p>修改</p>
+<p>ERP生产计划</p>
+<p>MES执行</p>
+<p>SCADA，POC跟设备跟人的联系</p>
+<p>总部-分工厂-生产线-工段-</p>
+<p>可以制定长中短期计划以填满产能</p>
+<p>制造范式：</p>
+<hr>
+<h1 id="医药制造数字化"><a href="#医药制造数字化" class="headerlink" title="医药制造数字化"></a><strong>医药制造数字化</strong></h1><h2 id="什么类型的方案？达成预期效果"><a href="#什么类型的方案？达成预期效果" class="headerlink" title="什么类型的方案？达成预期效果"></a>什么类型的方案？达成预期效果</h2><h2 id="预期效果是什么？"><a href="#预期效果是什么？" class="headerlink" title="预期效果是什么？"></a>预期效果是什么？</h2><p>工业制药目标是什么？</p>
+<p>数字化目标是什么？</p>
+<p>数字化能为工业制药带来什么？</p>
+<h3 id="医药制药数字化的预期效果是什么？"><a href="#医药制药数字化的预期效果是什么？" class="headerlink" title="医药制药数字化的预期效果是什么？"></a>医药制药数字化的预期效果是什么？</h3><ul>
+<li><p>提高生产效率-提效</p>
+</li>
+<li><p>提高库存水平-降本</p>
+</li>
+<li><p>提高生产质量-增质</p>
+</li>
+</ul>
+<h3 id="制造业的预期效果是什么？"><a href="#制造业的预期效果是什么？" class="headerlink" title="制造业的预期效果是什么？"></a>制造业的预期效果是什么？</h3><hr>
+<h1 id="可视化？BI？报表？"><a href="#可视化？BI？报表？" class="headerlink" title="可视化？BI？报表？"></a>可视化？BI？报表？</h1>
+  </div>
+</article>
+<div class="nav">
+  
+  
+  <div class="nav-item-next">
+    <a href="/2020/08/03/2020Q3关键计划跟进/" class="nav-link">
+      <div>
+        <div class="nav-label">Next</div>
+        
+      </div>
+      <i class="iconfont icon-right nav-next-icon"></i>
+    </a>
+  </div>
+  
+</div>
 
-{% block page_class %}page-post-detail{% endblock %}
+<div class="card card-content toc-card" id="mobiletoc">
+  <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>TOC</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%91%E4%BC%BC%E8%A1%8C%E4%B8%9A%E5%AD%A6%E4%B9%A0"><span class="toc-text">近似行业学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%BB%E8%8D%AF%E7%94%9F%E4%BA%A7%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-text">医药生产可视化</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8C%BB%E8%8D%AF%E5%88%B6%E9%80%A0%E6%95%B0%E5%AD%97%E5%8C%96"><span class="toc-text">医药制造数字化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%96%B9%E6%A1%88%EF%BC%9F%E8%BE%BE%E6%88%90%E9%A2%84%E6%9C%9F%E6%95%88%E6%9E%9C"><span class="toc-text">什么类型的方案？达成预期效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%84%E6%9C%9F%E6%95%88%E6%9E%9C%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">预期效果是什么？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%BB%E8%8D%AF%E5%88%B6%E8%8D%AF%E6%95%B0%E5%AD%97%E5%8C%96%E7%9A%84%E9%A2%84%E6%9C%9F%E6%95%88%E6%9E%9C%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">医药制药数字化的预期效果是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%B6%E9%80%A0%E4%B8%9A%E7%9A%84%E9%A2%84%E6%9C%9F%E6%95%88%E6%9E%9C%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">制造业的预期效果是什么？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%9FBI%EF%BC%9F%E6%8A%A5%E8%A1%A8%EF%BC%9F"><span class="toc-text">可视化？BI？报表？</span></a></li></ol>
+</div></main>
+          <aside class="left-column">
+            
+            <div class="card card-author">
+              
+<img src="/img/Kaze.png" class="author-img">
 
+<p class="author-name">theme-kaze</p>
+<p class="author-description">designed by theme-kaze</p>
+<div class="author-message">
+  <a class="author-posts-count" href="/archives">
+    <span>5</span>
+    <span>Posts</span>
+  </a>
+  <a class="author-categories-count" href="/categories">
+    <span>0</span>
+    <span>Categories</span>
+  </a>
+  <a class="author-tags-count" href="/tags">
+    <span>1</span>
+    <span>Tags</span>
+  </a>
+</div>
 
-{% block content %}
-
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
-
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+            </div>
+            
+            <div class="sticky-tablet">
+  
+  
+  <article class="display-when-two-columns spacer">
+    <div class="card card-content toc-card">
+      <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>TOC</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%91%E4%BC%BC%E8%A1%8C%E4%B8%9A%E5%AD%A6%E4%B9%A0"><span class="toc-text">近似行业学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%BB%E8%8D%AF%E7%94%9F%E4%BA%A7%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-text">医药生产可视化</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8C%BB%E8%8D%AF%E5%88%B6%E9%80%A0%E6%95%B0%E5%AD%97%E5%8C%96"><span class="toc-text">医药制造数字化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%96%B9%E6%A1%88%EF%BC%9F%E8%BE%BE%E6%88%90%E9%A2%84%E6%9C%9F%E6%95%88%E6%9E%9C"><span class="toc-text">什么类型的方案？达成预期效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%84%E6%9C%9F%E6%95%88%E6%9E%9C%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">预期效果是什么？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%BB%E8%8D%AF%E5%88%B6%E8%8D%AF%E6%95%B0%E5%AD%97%E5%8C%96%E7%9A%84%E9%A2%84%E6%9C%9F%E6%95%88%E6%9E%9C%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">医药制药数字化的预期效果是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%B6%E9%80%A0%E4%B8%9A%E7%9A%84%E9%A2%84%E6%9C%9F%E6%95%88%E6%9E%9C%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">制造业的预期效果是什么？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%9FBI%EF%BC%9F%E6%8A%A5%E8%A1%A8%EF%BC%9F"><span class="toc-text">可视化？BI？报表？</span></a></li></ol>
+    </div>
+  </article>
+  
+  
+  <article class="card card-content">
+    <div class="categories-card">
+  <div class="categories-header"><i class="iconfont icon-fenlei" style="padding-right: 2px;"></i>Categories</div>
+  <div class="categories-list">
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content">
+    <div class="tags-card">
+  <div class="tags-header"><i class="iconfont icon-biaoqian" style="padding-right: 2px;"></i>hot tags</div>
+  <div class="tags-list">
+    
+    <a href="\tags\管理知识" title="管理知识"><div class="tags-list-item">管理知识</div></a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+          </aside>
+          <aside class="right-column">
+            <div class="sticky-widescreen">
+  
+  
+  <article class="card card-content toc-card">
+    <div class="toc-header"><i class="iconfont icon-menu" style="padding-right: 2px;"></i>TOC</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%91%E4%BC%BC%E8%A1%8C%E4%B8%9A%E5%AD%A6%E4%B9%A0"><span class="toc-text">近似行业学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%BB%E8%8D%AF%E7%94%9F%E4%BA%A7%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-text">医药生产可视化</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8C%BB%E8%8D%AF%E5%88%B6%E9%80%A0%E6%95%B0%E5%AD%97%E5%8C%96"><span class="toc-text">医药制造数字化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%96%B9%E6%A1%88%EF%BC%9F%E8%BE%BE%E6%88%90%E9%A2%84%E6%9C%9F%E6%95%88%E6%9E%9C"><span class="toc-text">什么类型的方案？达成预期效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%84%E6%9C%9F%E6%95%88%E6%9E%9C%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">预期效果是什么？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%BB%E8%8D%AF%E5%88%B6%E8%8D%AF%E6%95%B0%E5%AD%97%E5%8C%96%E7%9A%84%E9%A2%84%E6%9C%9F%E6%95%88%E6%9E%9C%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">医药制药数字化的预期效果是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%B6%E9%80%A0%E4%B8%9A%E7%9A%84%E9%A2%84%E6%9C%9F%E6%95%88%E6%9E%9C%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">制造业的预期效果是什么？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%9FBI%EF%BC%9F%E6%8A%A5%E8%A1%A8%EF%BC%9F"><span class="toc-text">可视化？BI？报表？</span></a></li></ol>
+  </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header"><i class="iconfont icon-wenzhang_huaban" style="padding-right: 2px;"></i>Recent Posts</div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2020-08-07</div>
+        <a href="/2020/08/07/近似行业学习/"><div class="recent-posts-item-content"></div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2020-08-03</div>
+        <a href="/2020/08/03/2020Q3关键计划跟进/"><div class="recent-posts-item-content"></div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2020-08-03</div>
+        <a href="/2020/08/03/时间管理计划/"><div class="recent-posts-item-content"></div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2020-08-03</div>
+        <a href="/2020/08/03/2020年Q3西南医药沙龙/"><div class="recent-posts-item-content"></div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+          </aside>
+        </div>
+      </div>
     </div>
   </div>
+  
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="copyright">
+      <div>
+        <span id="copyYear">Copyright ©
+          
+          2020 -
+          
+          2020
+        </span>
+        <a href="/" class="footer-link">theme-kaze demo </a>
+      </div>
+    </div>
 
-{% endblock %}
+    
+    <div class="footer-dsc">
+      
+      
+      Powered by
+      <a href="https://hexo.io/" class="footer-link" target="_blank" rel="nofollow noopener noreferrer">&nbsp;Hexo </a>
+      
+      
+      <span>&nbsp;|&nbsp;</span>
+      
+      
+      
+      Theme -
+      <a href="https://github.com/theme-kaze" class="footer-link" target="_blank"
+        rel="nofollow noopener noreferrer">&nbsp;Kaze</a>
+      
+    </div>
+    
+    
+    
+</footer>
+  <a role="button" id="scrollbutton" class="basebutton" >
+  <i class="iconfont icon-arrowleft button-icon"></i>
+</a>
+<a role="button" id="menubutton" class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a role="button" id="popbutton" class="basebutton">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+  
+  
+  
+  <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img');
+    var i;
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a');
+      wrapper.setAttribute('data-fslightbox', 'gallery');
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'));
+      wrapper.setAttribute('style', 'width: 100%; display: flex; justify-content: center;');
+      img[i].parentElement.insertBefore(wrapper, img[i]);
+      wrapper.appendChild(img[i]);
+    }
+    refreshFsLightbox();
+  }
+</script>
+<script>loadScript("//cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js", addImgLayout)</script>
+  
+  
+  
+<script src="/js/main.js"></script>
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  <script>
+    var addLazyload = function () {
+      var observer = lozad('.lozad', {
+        load: function (el) {
+          el.srcset = el.getAttribute('data-src');
+        },
+        loaded: function (el) {
+          el.classList.add('loaded');
+        }
+      });
+      observer.observe();
+    }
+  </script>
+  <script>loadScript("/js/lib/lozad.min.js", addLazyload)</script>
+</body>
+
+</html>
