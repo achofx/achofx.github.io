@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+
+<html theme="dark" showBanner="true" hasBanner="false" > 
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet">
+<script src="/js/color.global.min.js" ></script>
+<script src="/js/load-settings.js" ></script>
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+
+  
+  <title>Augur&#39;s Space</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+  <meta name="description" content="西凤·终端通 — 终端360°全景数字化沙盘 移动端原型项目概述基于”白酒企业终端360°全景数字化沙盘”方案文档，为西凤酒设计实现的移动端H5交互原型。采用国风红×金×科技蓝三色系设计语言，模拟手机壳框架，完整呈现双角色端的核心业务流程。  已完成功能🎯 双角色登录 管理者端（大区经理）&#x2F; 业务员端独立入口 体验账号：zhang.wei（管理者）&#x2F; li.ming（业务员）">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Augur&#39;s Space">
+<meta property="og:url" content="http://example.com/my_page/README.html">
+<meta property="og:site_name" content="Augur&#39;s Space">
+<meta property="og:description" content="西凤·终端通 — 终端360°全景数字化沙盘 移动端原型项目概述基于”白酒企业终端360°全景数字化沙盘”方案文档，为西凤酒设计实现的移动端H5交互原型。采用国风红×金×科技蓝三色系设计语言，模拟手机壳框架，完整呈现双角色端的核心业务流程。  已完成功能🎯 双角色登录 管理者端（大区经理）&#x2F; 业务员端独立入口 体验账号：zhang.wei（管理者）&#x2F; li.ming（业务员）">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-04-03T06:17:11.471Z">
+<meta property="article:modified_time" content="2026-04-02T22:16:32.000Z">
+<meta property="article:author" content="scott">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Augur's Space" type="application/atom+xml">
+  
+  
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-32.png" sizes="32x32">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-128.png" sizes="128x128">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-180.png" sizes="180x180">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-192.png" sizes="192x192">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-32.png" sizes="32x32">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-128.png" sizes="128x128">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-180.png" sizes="180x180">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-192.png" sizes="192x192">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body>
+  
+   
+  <div id="main-grid" class="  ">
+    <div id="nav" class=""  >
+      <navbar id="navbar">
+  <nav id="title-nav">
+    <a href="/">
+      <div id="vivia-logo">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div>Augur's Space </div>
+    </a>
+  </nav>
+  <nav id="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    <a id="theme-btn" class="nav-icon">
+      <span class="light-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M438.5-829.913v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-829.913Zm0 747.826v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-82.087ZM877.913-438.5h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537t29.476-12.174h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T877.913-438.5Zm-747.826 0h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T82.087-521.5h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T130.087-438.5Zm660.174-290.87-34.239 32q-12.913 12.674-29.565 12.174-16.653-.5-29.327-13.174-12.674-12.673-12.554-28.826.12-16.152 12.794-28.826l33-35q12.913-12.674 30.454-12.674t30.163 12.847q12.709 12.846 12.328 30.826-.38 17.98-13.054 30.653ZM262.63-203.978l-32 34q-12.913 12.674-30.454 12.674t-30.163-12.847q-12.709-12.846-12.328-30.826.38-17.98 13.054-30.653l33.239-31q12.913-12.674 29.565-12.174 16.653.5 29.327 13.174 12.674 12.673 12.554 28.826-.12 16.152-12.794 28.826Zm466.74 33.239-32-33.239q-12.674-12.913-12.174-29.565.5-16.653 13.174-29.327 12.673-12.674 28.826-13.054 16.152-.38 28.826 12.294l35 33q12.674 12.913 12.674 30.454t-12.847 30.163q-12.846 12.709-30.826 12.328-17.98-.38-30.653-13.054ZM203.978-697.37l-34-33q-12.674-12.913-13.174-29.945-.5-17.033 12.174-29.707t31.326-13.293q18.653-.62 31.326 13.054l32 34.239q11.674 12.913 11.174 29.565-.5 16.653-13.174 29.327-12.673 12.674-28.826 12.554-16.152-.12-28.826-12.794ZM480-240q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm-.247-82q65.703 0 111.475-46.272Q637-414.544 637-480.247t-45.525-111.228Q545.95-637 480.247-637t-111.475 45.525Q323-545.95 323-480.247t45.525 111.975Q414.05-322 479.753-322ZM481-481Z"/></svg></span>
+      <span class="dark-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M480.239-116.413q-152.63 0-258.228-105.478Q116.413-327.37 116.413-480q0-130.935 77.739-227.435t206.304-125.043q43.022-9.631 63.87 10.869t3.478 62.805q-8.891 22.043-14.315 44.463-5.424 22.42-5.424 46.689 0 91.694 64.326 155.879 64.325 64.186 156.218 64.186 24.369 0 46.978-4.946 22.609-4.945 44.413-14.076 42.826-17.369 62.967 1.142 20.142 18.511 10.511 61.054Q807.174-280 712.63-198.206q-94.543 81.793-232.391 81.793Zm0-95q79.783 0 143.337-40.217 63.554-40.218 95.793-108.283-15.608 4.044-31.097 5.326-15.49 1.283-31.859.805-123.706-4.066-210.777-90.539-87.071-86.473-91.614-212.092-.24-16.369.923-31.978 1.164-15.609 5.446-30.978-67.826 32.478-108.282 96.152Q211.652-559.543 211.652-480q0 111.929 78.329 190.258 78.329 78.329 190.258 78.329ZM466.13-465.891Z"/></svg></span>
+    </a>
+    
+      <a id="nav-rss-link" class="nav-icon mobile-hide" href="/atom.xml" title="RSS Feed">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M198-120q-25.846 0-44.23-18.384-18.384-18.385-18.384-44.23 0-25.846 18.384-44.23 18.384-18.385 44.23-18.385 25.846 0 44.23 18.385 18.384 18.384 18.384 44.23 0 25.845-18.384 44.23Q223.846-120 198-120Zm538.385 0q-18.846 0-32.923-13.769-14.076-13.769-15.922-33.23-8.692-100.616-51.077-188.654-42.385-88.039-109.885-155.539-67.5-67.501-155.539-109.885Q283-663.462 182.385-672.154q-19.461-1.846-33.23-16.23-13.769-14.385-13.769-33.846t14.076-32.922q14.077-13.461 32.923-12.23 120.076 8.692 226.038 58.768 105.961 50.077 185.73 129.846 79.769 79.769 129.846 185.731 50.077 105.961 58.769 226.038 1.231 18.846-12.538 32.922Q756.461-120 736.385-120Zm-252 0q-18.231 0-32.423-13.461t-18.653-33.538Q418.155-264.23 348.886-333.5q-69.27-69.27-166.501-84.423-20.077-4.462-33.538-18.961-13.461-14.5-13.461-33.346 0-19.076 13.884-33.23 13.884-14.153 33.115-10.922 136.769 15.384 234.384 112.999 97.615 97.615 112.999 234.384 3.231 19.23-10.538 33.115Q505.461-120 484.385-120Z"/></svg>
+      </a>
+    
+    <div id="nav-menu-btn" class="nav-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M177.37-252.282q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Zm0-186.218q-17.453 0-29.477-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T177.37-521.5h605.26q17.453 0 29.477 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T782.63-438.5H177.37Zm0-186.217q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Z"/></svg>
+    </div>
+  </nav>
+</navbar>
+<div id="nav-dropdown" class="hidden">
+  <div id="dropdown-link-list">
+    
+      <a class="nav-dropdown-link" href="/">Home</a>
+    
+      <a class="nav-dropdown-link" href="/archives">Archives</a>
+    
+      <a class="nav-dropdown-link" href="/about">About</a>
+    
+    
+      <a class="nav-dropdown-link" href="/atom.xml" title="RSS Feed">RSS</a>
+     
+    </div>
+</div>
+<script>
+  let dropdownBtn = document.getElementById("nav-menu-btn");
+  let dropdownEle = document.getElementById("nav-dropdown");
+  dropdownBtn.onclick = function() {
+    dropdownEle.classList.toggle("hidden");
+  }
+</script>
+    </div>
+    <div id="sidebar-wrapper">
+      <sidebar id="sidebar">
+  
+    <div class="widget-wrap">
+  <div class="info-card">
+    <div class="avatar">
+      
+      <div class="img-dim"></div>
+    </div>
+    <div class="info">
+      <div class="username">Your Name </div>
+      <div class="dot"></div>
+      <div class="subtitle">This is the subtitle </div>
+      <div class="link-list">
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://twitter.com" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://store.steampowered.com" title="Steam"><i class="fa-brands fa-steam"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://github.com" title="GitHub"><i class="fa-brands fa-github"></i></a>
+         
+      </div>  
+    </div>
+  </div>
+</div>
+
+  
+  <div class="sticky">
+    
+      
+
+
+
+    
+      
+
+    
+  </div>
+</sidebar>
+    </div>
+    <div id="content-body">
+       
+
+
+<article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 class="p-name article-title" itemprop="headline name">
+        Untitled
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2026-04-03T06:17:11.471Z" itemprop="datePublished">2026-04-03</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+    Uncategorized 
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            2.1k words 
+          </div>
+        </div>
+        
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <h1 id="西凤·终端通-—-终端360°全景数字化沙盘-移动端原型"><a href="#西凤·终端通-—-终端360°全景数字化沙盘-移动端原型" class="headerlink" title="西凤·终端通 — 终端360°全景数字化沙盘 移动端原型"></a>西凤·终端通 — 终端360°全景数字化沙盘 移动端原型</h1><h2 id="项目概述"><a href="#项目概述" class="headerlink" title="项目概述"></a>项目概述</h2><p>基于”白酒企业终端360°全景数字化沙盘”方案文档，为<strong>西凤酒</strong>设计实现的移动端H5交互原型。采用国风红×金×科技蓝三色系设计语言，模拟手机壳框架，完整呈现双角色端的核心业务流程。</p>
+<hr>
+<h2 id="已完成功能"><a href="#已完成功能" class="headerlink" title="已完成功能"></a>已完成功能</h2><h3 id="🎯-双角色登录"><a href="#🎯-双角色登录" class="headerlink" title="🎯 双角色登录"></a>🎯 双角色登录</h3><ul>
+<li>管理者端（大区经理）&#x2F; 业务员端独立入口</li>
+<li>体验账号：<code>zhang.wei</code>（管理者）&#x2F; <code>li.ming</code>（业务员）</li>
+</ul>
+<h3 id="📊-管理者端（5个核心模块）"><a href="#📊-管理者端（5个核心模块）" class="headerlink" title="📊 管理者端（5个核心模块）"></a>📊 管理者端（5个核心模块）</h3><table>
+<thead>
+<tr>
+<th>模块</th>
+<th>功能点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>首页大盘</strong></td>
+<td>终端总量&#x2F;活跃率&#x2F;动销率&#x2F;风险门店四维统计条；动销趋势折线图；分公司排行榜；消费者互动数据（扫码率&#x2F;开瓶率&#x2F;好评率）</td>
+</tr>
+<tr>
+<td><strong>地图终端</strong></td>
+<td>模拟GIS地图、多类型点位（高风险红&#x2F;预警橙&#x2F;正常绿）；点位弹窗详情；电子围栏开关；多维筛选（全部&#x2F;风险&#x2F;活跃&#x2F;预警）；列表&#x2F;地图切换</td>
+</tr>
+<tr>
+<td><strong>纵向穿透</strong></td>
+<td>分公司看板→经销商列表（第二层穿透）→终端详情（第三层）；分公司柱状图对比</td>
+</tr>
+<tr>
+<td><strong>风险预警</strong></td>
+<td>37条风险分级展示（高&#x2F;中&#x2F;低）；一键下达任务；一键忽略</td>
+</tr>
+<tr>
+<td><strong>任务管理</strong></td>
+<td>任务列表（待接收&#x2F;进行中&#x2F;已完成）；快速下达任务Sheet；新建任务Sheet</td>
+</tr>
+</tbody></table>
+<h3 id="🏪-终端详情页（第三层穿透）"><a href="#🏪-终端详情页（第三层穿透）" class="headerlink" title="🏪 终端详情页（第三层穿透）"></a>🏪 终端详情页（第三层穿透）</h3><ul>
+<li>门店画像（门头照&#x2F;类型&#x2F;信用评级&#x2F;店主信息）</li>
+<li>核心KPI：库存余量&#x2F;本月动销&#x2F;拜访次数&#x2F;扫码率</li>
+<li>进销存趋势图（6个月历史进货+动销Bar Chart）</li>
+<li>风险状态卡（根据风险等级动态渲染颜色）</li>
+<li>责任主体反向溯源（分公司→经销商→业务员→终端）</li>
+<li>近期拜访时间线</li>
+<li>消费者反馈（扫码参与率&#x2F;开瓶率&#x2F;评价均分&#x2F;用户评论）</li>
+</ul>
+<h3 id="👨‍💼-业务员端（4个Tab）"><a href="#👨‍💼-业务员端（4个Tab）" class="headerlink" title="👨‍💼 业务员端（4个Tab）"></a>👨‍💼 业务员端（4个Tab）</h3><table>
+<thead>
+<tr>
+<th>Tab</th>
+<th>功能点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>工作台</strong></td>
+<td>签到打卡（动效）；今日任务列表（紧急标红）；今日拜访路线；本月业绩概览</td>
+</tr>
+<tr>
+<td><strong>拜访打卡</strong></td>
+<td>库存盘点计数器；陈列合格情况选择；备注填写；照片上传模拟；提交打卡</td>
+</tr>
+<tr>
+<td><strong>我的终端</strong></td>
+<td>管辖43家终端列表；风险状态分类；一键导航到终端详情</td>
+</tr>
+<tr>
+<td><strong>业绩报告</strong></td>
+<td>拜访完成率柱图；本月轨迹时间线</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="功能入口路径"><a href="#功能入口路径" class="headerlink" title="功能入口路径"></a>功能入口路径</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">/ (index.html)</span><br><span class="line">├── 登录页          → 选择角色登录</span><br><span class="line">├── [管理者端]</span><br><span class="line">│   ├── /home       → 首页大盘</span><br><span class="line">│   ├── /map        → 地图终端（点击点位→弹窗→查看详情）</span><br><span class="line">│   ├── /branch     → 分公司穿透→经销商→终端</span><br><span class="line">│   ├── /warning    → 风险预警（下达任务）</span><br><span class="line">│   └── /task       → 任务管理</span><br><span class="line">│       └── terminal/:id → 终端详情（任意入口均可进入）</span><br><span class="line">└── [业务员端]</span><br><span class="line">    ├── /sales-home  → 工作台+打卡</span><br><span class="line">    ├── /sales-visit → 拜访表单</span><br><span class="line">    ├── /sales-terminal → 我的终端</span><br><span class="line">    └── /sales-report   → 业绩报告</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="数据模型"><a href="#数据模型" class="headerlink" title="数据模型"></a>数据模型</h2><table>
+<thead>
+<tr>
+<th>实体</th>
+<th>核心字段</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>分公司</td>
+<td>终端总量&#x2F;活跃数&#x2F;风险数&#x2F;动销率&#x2F;增长趋势&#x2F;经销商数</td>
+</tr>
+<tr>
+<td>经销商</td>
+<td>负责人&#x2F;门店数&#x2F;活跃数&#x2F;库存&#x2F;风险终端数</td>
+</tr>
+<tr>
+<td>终端</td>
+<td>类型&#x2F;级别&#x2F;信用&#x2F;库存&#x2F;动销&#x2F;拜访次数&#x2F;扫码率&#x2F;进货峰值&#x2F;补货预测&#x2F;责任主体</td>
+</tr>
+<tr>
+<td>风险预警</td>
+<td>终端&#x2F;类型&#x2F;等级(high&#x2F;warning&#x2F;info)&#x2F;描述&#x2F;时间&#x2F;归属分支</td>
+</tr>
+<tr>
+<td>任务</td>
+<td>标题&#x2F;类型&#x2F;关联终端&#x2F;指派人&#x2F;截止日期&#x2F;状态&#x2F;优先级</td>
+</tr>
+<tr>
+<td>业务员</td>
+<td>今日路线&#x2F;任务列表&#x2F;管辖终端&#x2F;打卡记录&#x2F;月度业绩</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><ul>
+<li><strong>纯静态 HTML5 + CSS3 + Vanilla JS</strong>（单页SPA架构）</li>
+<li><strong>Chart.js 4.4.0</strong>：动销趋势折线图、进销存柱状图、圆环图、分公司对比图、业务员拜访完成图</li>
+<li><strong>Google Fonts Noto Sans SC</strong>：中文字体</li>
+<li><strong>CSS自定义属性</strong>：品牌色系统（西凤红&#x2F;国风金&#x2F;科技蓝）</li>
+<li><strong>CSS动画</strong>：页面切换、风险红点脉冲、Sheet弹窗上滑</li>
+</ul>
+<hr>
+<h2 id="设计规范"><a href="#设计规范" class="headerlink" title="设计规范"></a>设计规范</h2><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>规范</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>主色</td>
+<td>西凤红 <code>#C0392B</code></td>
+</tr>
+<tr>
+<td>辅色</td>
+<td>国风金 <code>#D4A017</code></td>
+</tr>
+<tr>
+<td>数据色</td>
+<td>科技蓝 <code>#1565C0</code></td>
+</tr>
+<tr>
+<td>字体</td>
+<td>Noto Sans SC（Google Fonts）</td>
+</tr>
+<tr>
+<td>手机框</td>
+<td>390×844（iPhone 14标准）</td>
+</tr>
+<tr>
+<td>圆角</td>
+<td>6&#x2F;12&#x2F;16&#x2F;20px 四档</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="待完善功能（下一步建议）"><a href="#待完善功能（下一步建议）" class="headerlink" title="待完善功能（下一步建议）"></a>待完善功能（下一步建议）</h2><ol>
+<li><strong>真实地图集成</strong>：接入高德&#x2F;腾讯地图SDK，实现真实GIS点位落图</li>
+<li><strong>数据后端对接</strong>：通过RESTful Table API持久化终端数据</li>
+<li><strong>业务员GPS定位</strong>：接入H5 Geolocation API实现真实打卡校验</li>
+<li><strong>陈列照片上传</strong>：接入OSS对象存储实现真实图片上传</li>
+<li><strong>消息推送</strong>：风险预警实时推送（WebSocket&#x2F;FCM）</li>
+<li><strong>搜索功能完善</strong>：模糊搜索终端名称、地址、店主</li>
+<li><strong>离线缓存</strong>：PWA化，支持弱网环境使用</li>
+<li><strong>数据可视化升级</strong>：ECharts替代Chart.js，实现更丰富的地图热力图</li>
+</ol>
+<hr>
+<p><em>项目创建于 2026-03-22 | 西凤·终端通 v1.0 原型版</em></p>
+
+        
+      </div>
+
+         
+    </div>
+    
+     
+  </div>
+  
+    
+
+  
+</article>
+
+
+
+
+
+    </div>
+    <div id="footer-wrapper">
+      <footer id="footer">
+  
+  <div id="footer-info" class="inner">
+    
+    &copy; 2026 Your Name<br>
+    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & Theme <a target="_blank" rel="noopener" href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a>
+  </div>
+</footer>
+
+    </div>
+    <div class="back-to-top-wrapper">
+    <button id="back-to-top-btn" class="back-to-top-btn hide" onclick="topFunction()">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+</div>
+
+<script>
+    function topFunction() {
+        window.scroll({ top: 0, behavior: 'smooth' });
+    }
+    let btn = document.getElementById('back-to-top-btn');
+    function scrollFunction() {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            btn.classList.remove('hide')
+        } else {
+            btn.classList.add('hide')
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction();
+    }
+</script>
+
+  </div>
+  <script src="/js/light-dark-switch.js"></script>
+</body>
+</html>
